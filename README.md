@@ -143,53 +143,53 @@ JOIN Books b ON od.BookID = b.BookID;
 ```sql
 CREATE TABLE Books (
 BookID int NOT NULL PRIMARY KEY,
-Title varchar(255),
-AuthorID int,
-Publisher varchar(255),
-PublicationYear int,
-Price decimal(10,2),
-StockQuantity int
+Title varchar(255) NOT NULL,
+AuthorID int NOT NULL,
+Publisher varchar(255) NOT NULL,
+PublicationYear int NOT NULL,
+Price decimal(10,2) NOT NULL,
+StockQuantity int NOT NULL
 );
 
 CREATE TABLE Authors (
 AuthorID int NOT NULL PRIMARY KEY,
-FirstName varchar(50),
-LastName varchar(50),
-MiddleName varchar(50)
+FirstName varchar(50) NOT NULL,
+LastName varchar(50) NOT NULL,
+MiddleName varchar(50) NOT NULL
 );
 
 CREATE TABLE Employees (
 EmployeeID int NOT NULL PRIMARY KEY,
-FirstName varchar(50),
-LastName varchar(50),
-MiddleName varchar(50),
-Position varchar(255),
-Salary decimal(10,2),
-Address varchar(255),
-PhoneNumber varchar(20)
+FirstName varchar(50) NOT NULL,
+LastName varchar(50) NOT NULL,
+MiddleName varchar(50) NOT NULL,
+Position varchar(255) NOT NULL,
+Salary decimal(10,2) NOT NULL,
+Address varchar(255) NOT NULL,
+PhoneNumber varchar(20) NOT NULL
 );
 
 CREATE TABLE Orders (
 OrderID int NOT NULL PRIMARY KEY,
-Date date,
-CustomerID int,
-EmployeeID int
+Date date NOT NULL,
+CustomerID int NOT NULL,
+EmployeeID int NOT NULL
 );
 
 CREATE TABLE Customers (
 CustomerID int NOT NULL PRIMARY KEY,
-FirstName varchar(50),
-LastName varchar(50),
-MiddleName varchar(50),
-Address varchar(255),
-PhoneNumber varchar(20)
+FirstName varchar(50) NOT NULL,
+LastName varchar(50) NOT NULL,
+MiddleName varchar(50) NOT NULL,
+Address varchar(255) NOT NULL,
+PhoneNumber varchar(20) NOT NULL
 );
 
 CREATE TABLE OrderDetails (
-OrderID int,
-BookID int,
-Quantity int,
-Price decimal(10,2)
+OrderID int NOT NULL,
+BookID int NOT NULL,
+Quantity int NOT NULL,
+Price decimal(10,2) NOT NULL
 );
 ```
 
